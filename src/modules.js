@@ -2,6 +2,7 @@
   'use strict';
 
   angular.module('colegiul-pacientilor.controllers', []);
+  angular.module('colegiul-pacientilor.registries.controller', []);
 
   angular.module('colegiul-pacientilor.ui', [
     'ui.router',

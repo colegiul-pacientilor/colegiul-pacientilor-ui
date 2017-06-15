@@ -42,7 +42,7 @@
         .state('index.registries.add', {
           url: '/add',
           templateUrl: 'registries/registries.add.tpl.html',
-          controller: 'RegistriesCtrl as ctrl'
+          controller: 'RegistriesAddCtrl as ctrl'
         })
         .state('index.registries.edit', {
           url: '/edit',
