@@ -1,1 +1,73 @@
-<div>Profile</div>
+<h1>Profile</h1>
+
+<div class="row">
+    <div class="col-md-3">
+        <span>First name</span>
+    </div>
+    <div class="col-md-3">
+        <input ng-model="ctrl.user.firstName" class="form-control input-sm"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <span>Last name</span>
+    </div>
+    <div class="col-md-3">
+        <input ng-model="ctrl.user.lastName" class="form-control input-sm"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <span>Email</span>
+    </div>
+    <div class="col-md-3">
+        <input ng-model="ctrl.user.email" class="form-control input-sm"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <span>Password</span>
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-sm"> Change </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <span>Gender</span>
+    </div>
+    <div class="col-md-3">
+        <select class="selector selector3">
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <span>Phone</span>
+    </div>
+    <div class="col-md-3">
+        <input ng-model="ctrl.user.phone" class="form-control input-sm"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+
+    </div>
+    <div class="col-md-3">
+        <label> <input ng-model="ctrl.user.isDoctor" type="checkbox" class="checkbox checkbox-inline"/> I am a doctor</label>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-3" style="text-align:right">
+        <button class="btn btn-success">Save</button>
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-danger">Cancel</button>
+    </div>
+</div>
+
+
