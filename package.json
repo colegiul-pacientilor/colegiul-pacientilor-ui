@@ -1,0 +1,52 @@
+{
+  "name": "colegiul-pacientilor-ui",
+  "version": "0.0.1",
+  "description": "colegiul-pacientilor-ui",
+  "main": "dist/colegiul-pacientilor-ui.min.js",
+  "scripts": {
+    "test": "karma start karma.conf.js --single-run",
+    "prod-build": "grunt",
+    "push-tags": "git push && git push --tags",
+    "patch": "npm version patch && npm run-script push-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarbull/colegiul-pacientilor-ui.git"
+  },
+  "keywords": [
+    "colegiul",
+    "pacientilor"
+  ],
+  "author": "Team DataHackers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sarbull/colegiul-pacientilor-ui/issues"
+  },
+  "homepage": "https://github.com/sarbull/colegiul-pacientilor-ui#readme",
+  "devDependencies": {
+    "angular": "^1.5.5",
+    "angular-loading-bar": "^0.9.0",
+    "angular-mocks": "^1.5.5",
+    "angular-sanitize": "^1.5.6",
+    "angular-ui-bootstrap": "^1.3.3",
+    "angular-ui-router": "^0.3.1",
+    "bootstrap": "^3.3.6",
+    "bootswatch": "^3.3.6",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-less": "^1.3.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-html2js": "^0.3.6",
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
+    "jquery": "^2.2.4",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "ng-showdown": "^1.1.0",
+    "showdown": "^1.4.1"
+  }
+}
