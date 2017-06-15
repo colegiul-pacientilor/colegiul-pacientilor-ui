@@ -21,32 +21,21 @@
     RegistryService.findById($state.params.id).then(function(response) {
       self.registry = response.data;
 
- /*
-      {
-        name: 'Nume',
-        value: 'Cezar'
-      },
-      {
-        name: 'CNP',
-        value: '123'
-      }
-
-
-
-
-
-      {
-        nume: 'Cezar',
-        cnp: '123'
-      }
-   */
-
       var values = [];
 
-      console.log(response.data.records);
+      response.data.records.forEach(function(r) {
+        var object = {};
+        r.values.forEach(function(item) {
+          for (var name in item) {
+            if (name == 'name') {
+              object[item.name.toString().toLowerCase()] = item.value;
+            }
+          }
+        });
+        values.push(object);
+      });
 
-
-      self.gridOptions.data = response.data.records[0].values;
+      self.gridOptions.data = values;
     });
   }
 
