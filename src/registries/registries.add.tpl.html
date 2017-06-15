@@ -20,6 +20,20 @@
 
         <div class="form-group">
           <div class="col-md-2">
+            <label for="inputStatus" class="control-label">Status</label>
+          </div>
+
+          <div class="col-md-10">
+            <select ng-model="ctrl.registry.status" id="inputStatus" class="form-control">
+              <option value="OPEN">Open</option>
+              <option value="DRAFT">Draft</option>
+              <option value="CLOSED">Closed</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-2">
             <label for="inputDescription" class="control-label">Description</label>
           </div>
           <div class="col-md-10">
@@ -106,7 +120,7 @@
 
         <div class="form-group">
           <div class="col-md-10">
-            <button type="submit" class="btn btn-success">Save</button>
+            <button ng-click="ctrl.submit()" class="btn btn-success">Save</button>
           </div>
         </div>
       </fieldset>

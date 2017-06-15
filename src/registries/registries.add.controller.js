@@ -5,7 +5,10 @@
     .module('colegiul-pacientilor.registries.controller')
     .controller('RegistriesAddCtrl', RegistriesAddCtrl);
 
-  function RegistriesAddCtrl() {
+  RegistriesAddCtrl.$inject = ['$http', '$state'];
+
+  function RegistriesAddCtrl($http, $state) {
+    var self = this;
 
     this.registry = {
       name: '',
@@ -24,6 +27,23 @@
       });
 
       console.log(this.registry.fields);
+    };
+
+    this.submit = function() {
+      $http({
+        method: 'POST',
+        url: 'http://localhost:3001/registries',
+        data: self.registry,
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(function successCallback(response) {
+        console.log(response);
+
+        $state.go('index.home');
+      }, function errorCallback(response) {
+
+      });
     };
   }
 
