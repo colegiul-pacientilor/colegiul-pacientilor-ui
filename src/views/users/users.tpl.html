@@ -1,1 +1,26 @@
-<div>Users page 2</div>
+<div class="row">
+  <div class="col-md-3 col-md-offset-3" style="text-align:right">
+    <button ui-sref="index.users" class="btn btn-success">Users</button>
+  </div>
+  <div class="col-md-3">
+    <button ui-sref="index.users" class="btn btn-success">Groups</button>
+  </div>
+</div>
+
+<h1>Users</h1>
+<div class="row">
+  <div class="col-md-3">
+    <input ng-model="filterValue" class="form-control input-sm"/>
+  </div>
+  <div class="col-md-3">
+    <button ng-click="filter()" class="btn btn-xs btn-success">Filter</button>
+  </div>
+</div>
+
+<br/>
+
+<div class="row">
+  <div class="col-md-12">
+    <div id="users" ui-grid="gridOptions" class="grid"></div>
+  </div>
+</div>

@@ -48,5 +48,8 @@
     "karma-jasmine": "^1.0.2",
     "ng-showdown": "^1.1.0",
     "showdown": "^1.4.1"
+  },
+  "dependencies": {
+    "angular-ui-grid": "^4.0.6"
   }
 }

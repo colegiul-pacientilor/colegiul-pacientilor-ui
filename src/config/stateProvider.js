@@ -31,7 +31,8 @@
         })
         .state('index.users', {
           url: 'users',
-          templateUrl: 'views/users/users.tpl.html'
+          templateUrl: 'views/users/users.tpl.html',
+          controller: 'UsersController'
         })
         .state('index.profile', {
           url: 'profile',
