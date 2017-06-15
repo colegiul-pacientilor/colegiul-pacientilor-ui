@@ -34,7 +34,7 @@
           </div>
         </div>
 
-        <div class="form-group" ng-repeat="field in ctrl.registry.administrativeFields">
+        <div class="form-group" ng-repeat="field in ctrl.registry.fields | filter:{'regType':  'administrative'}:true ">
           <div class="col-md-2">
             <input type="text" class="form-control" ng-model="field.name" placeholder="Field name">
           </div>
@@ -62,7 +62,7 @@
 
         <div class="form-group">
           <div class="col-md-10">
-            <button ng-click="ctrl.addAdministrativeField()" class="btn btn-primary btn-xs">Add new</button>
+            <button ng-click="ctrl.addField('administrative')" class="btn btn-primary btn-xs">Add new</button>
           </div>
         </div>
 
@@ -72,7 +72,7 @@
           </div>
         </div>
 
-        <div class="form-group" ng-repeat="field in ctrl.registry.clinicalFields">
+        <div class="form-group" ng-repeat="field in ctrl.registry.fields | filter:{'regType': 'clinical'}:true ">
           <div class="col-md-2">
             <input type="text" class="form-control" ng-model="field.name" placeholder="Field name">
           </div>
@@ -100,7 +100,7 @@
 
         <div class="form-group">
           <div class="col-md-10">
-            <button ng-click="ctrl.addClinicalField()" class="btn btn-primary btn-xs">Add new</button>
+            <button ng-click="ctrl.addField('clinical')" class="btn btn-primary btn-xs">Add new</button>
           </div>
         </div>
 
