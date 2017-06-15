@@ -1,26 +1,36 @@
 
 <div class="container">
+    <div class="col-lg-4">
+        <h2 id="nav-tabs">Data view</h2>
+        <div class="bs-component">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#home" data-toggle="tab" aria-expanded="true">Registry</a></li>
+                <li class=""><a href="#profile" data-toggle="tab" aria-expanded="false">Demographics</a></li>
+                <li class=""><a href="#cloud" data-toggle="tab" aria-expanded="false">Other</a></li>
 
-      <div class="row">
-        <h1> Medical Cases by Registry </h1>
-        <div class="col-md-12">
-            <iframe src="http://10.0.177.196:5601/goto/8d5183aedc65ce5db1edb9bbabede52a?embed=true" height="600" width="800"></iframe>
-        </div>
-    </div>
-
-    <div class="row">
-        <h1> Medical Cases by Status </h1>
-        <div class="col-md-12">
-
-            <iframe src="http://10.0.177.196:5601/app/kibana#/visualize/edit/dd1fa1b0-51f3-11e7-ab5b-b104e50b5d07?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:'2015-06-15T17:52:15.483Z',mode:absolute,to:'2017-06-30T20:59:59.999Z'))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(spy:(mode:(fill:!f,name:table))),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:status.keyword,order:desc,orderBy:'1',size:5),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTooltip:!t,isDonut:!f,legendPosition:right),title:Status,type:pie))"
-                    height="600" width="800"></iframe>
-        </div>
-    </div>
-
-    <div class="row">
-        <h1> Medical Cases by Gender </h1>
-        <div class="col-md-12">
-            <iframe src="http://10.0.177.196:5601/goto/e64883084fe84559d707d53978b297d5?embed=true" height="600" width="800"></iframe>
-        </div>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade active in" id="home">
+                    <div class="row">
+                        <h1> Medical Cases by Status </h1>
+                        <div class="col-md-12">
+                            <iframe src="http://10.0.177.196:5601/goto/3263cec03d5679bbe9a8fd92ab8ebe5b?embed=true" height="600" width="800"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="profile">
+                    <h3> Gender </h3>
+                    <div class="col-md-12">
+                        <iframe src="http://10.0.177.196:5601/goto/a6bc358a2ebb91abaaa4221833823b10?embed=true" height="600" width="800"></iframe>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="cloud">
+                    <h1>Registry Cloud</h1>
+                    <div class="col-md-12">
+                        <iframe src="http://localhost:5601/goto/63ade5747f21b2aff102355f26dd5d04?embed=true" height="600" width="800"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
     </div>
 </div>
