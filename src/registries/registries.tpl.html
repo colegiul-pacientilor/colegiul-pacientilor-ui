@@ -1,8 +1,20 @@
-<div>
-    <h2>Who we are and what we do?</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ratione et, a harum totam, asperiores veritatis, repellat consectetur voluptatum quas, repudiandae. Reprehenderit amet, magnam eligendi eveniet doloribus ea neque fuga.</p>
-    <h2>Open Registries</h2>
-    <ul id="open-registries">
-        <li ng-repeat="registry in ctrl.registries"><a href="#">{{ registry.name }}</a></li>
-    </ul>
+<h1>Registries</h1>
+<div class="row">
+    <div class="col-md-3">
+        <input ng-model="filterValue" class="form-control input-sm"/>
+    </div>
+    <div class="col-md-3">
+        <button ng-click="filter()" class="btn btn-xs btn-success">Search</button>
+    </div>
+    <div class="col-md-1 col-md-offset-4">
+        <button ng-click="" class="btn btn-xs btn-success">Create new Registry</button>
+    </div>
+</div>
+
+<br/>
+
+<div class="row">
+    <div class="col-md-12">
+        <div id="users" ui-grid="gridOptions" class="grid"></div>
+    </div>
 </div>
