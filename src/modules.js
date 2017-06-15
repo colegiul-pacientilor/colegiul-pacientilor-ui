@@ -9,7 +9,8 @@
     'colegiul-pacientilor-ui.templateCache',
     'angular-loading-bar',
     'ui.bootstrap',
-    'ng-showdown'
+    'ng-showdown',
+    'colegiul-pacientilor.registries.controller'
   ]);
 
   angular.element(document).ready(function() {

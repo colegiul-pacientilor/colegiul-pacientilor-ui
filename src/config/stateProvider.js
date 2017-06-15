@@ -20,11 +20,31 @@
           url: '/',
           templateUrl: 'views/index.tpl.html'
         })
+        .state('index.home', {
+          url: 'home',
+          templateUrl: 'views/home/home.tpl.html'
+        })
+        .state('index.registries', {
+          url: 'registries',
+          templateUrl: 'views/registries/registries.tpl.html',
+          controller: 'RegistriesCtrl as registry'
+        })
+        .state('index.users', {
+          url: 'users',
+          templateUrl: 'views/users/users.tpl.html'
+        })
+        .state('index.profile', {
+          url: 'profile',
+          templateUrl: 'views/profile/profile.tpl.html'
+        })
+
+
+
         .state('index.courses', {
           url: 'courses',
           templateUrl: 'views/courses.tpl.html'
         })
-        .state('index.contact', {
+        .state('index.logoff', {
           url: 'contact',
           templateUrl: 'views/contact.tpl.html'
         })
@@ -40,10 +60,14 @@
             url: '/profile',
             templateUrl: 'views/account/profile.tpl.html'
         })
+
+
+
         .state('index.account.security', {
             url: '/security',
             templateUrl: 'views/account/security.tpl.html'
         })
+        
 
         /*
          * Courses
