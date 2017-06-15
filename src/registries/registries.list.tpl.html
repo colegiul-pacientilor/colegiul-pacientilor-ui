@@ -1,1 +1,21 @@
-<div>Registries List </div>
+<div>
+    <div class="row">
+        <div class="col-md-3">
+            <input ng-model="filterValue" class="form-control input-sm"/>
+        </div>
+        <div class="col-md-3">
+            <button ng-click="filter()" class="btn btn-xs btn-success">Search</button>
+        </div>
+        <div class="col-md-1 col-md-offset-4">
+            <button ng-click="" class="btn btn-xs btn-success">Create new Registry</button>
+        </div>
+    </div>
+
+    <p></p>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div id="users" ui-grid="gridOptions" class="grid"></div>
+        </div>
+    </div>
+</div>

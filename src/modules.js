@@ -13,6 +13,7 @@
     'colegiul-pacientilor.registries.controller',
     'colegiul-pacientilor.registries.factory',
     'colegiul-pacientilor.profile.controllers',
+    'colegiul-pacientilor.registries.list.controller',
     'ui.grid'
   ]);
 

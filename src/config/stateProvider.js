@@ -25,6 +25,10 @@
           templateUrl: 'registries/home.tpl.html',
           controller: 'RegistriesCtrl as ctrl'
         })
+        .state('index.analytics', {
+            url: 'analytics',
+            templateUrl: 'home/analytics.tpl.html'
+        })
         .state('index.registries', {
           url: 'registries',
           abstract: true,
@@ -33,7 +37,7 @@
         .state('index.registries.list', {
           url: '/list',
           templateUrl: 'registries/registries.list.tpl.html',
-          controller: 'RegistriesCtrl as ctrl'
+          controller: 'RegistriesListCtrl'
         })
         .state('index.registries.add', {
           url: '/add',
