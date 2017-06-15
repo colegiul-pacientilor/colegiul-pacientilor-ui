@@ -10,12 +10,8 @@
   function RegistriesShowCtrl(RegistryService, $state) {
     var self = this;
 
-    this.gridOptions = {
-      enableSorting: true,
-      columnDefs: [
-        { field: 'name' },
-        { field: 'cnp' }
-      ]
+    self.gridOptions = {
+      enableSorting: true
     };
 
     RegistryService.findById($state.params.id).then(function(response) {
@@ -34,6 +30,23 @@
         });
         values.push(object);
       });
+
+      console.log(values);
+
+      var keys = [];
+
+      values.forEach(function(item) {
+        keys = Object.keys(item);
+      });
+
+      var columnDefs = [];
+      keys.forEach(function(key) {
+        columnDefs.push({field: key});
+      });
+
+      self.gridOptions = {
+        columnDefs: columnDefs
+      };
 
       self.gridOptions.data = values;
     });
