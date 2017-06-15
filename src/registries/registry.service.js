@@ -7,7 +7,8 @@ RegistryService.$inject = ['$http'];
 function RegistryService($http) {
   var api = 'http://localhost:3001/',
     service = {
-      all: all
+      all: all,
+      findById: findById
     };
 
   return service;
@@ -16,6 +17,15 @@ function RegistryService($http) {
     var config = {
       method: 'GET',
       url: api + 'registries'
+    };
+
+    return $http(config);
+  }
+
+  function findById(id) {
+    var config = {
+      method: 'GET',
+      url: api + 'registries/' + id
     };
 
     return $http(config);

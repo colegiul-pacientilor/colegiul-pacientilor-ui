@@ -44,6 +44,11 @@
           templateUrl: 'registries/registries.add.tpl.html',
           controller: 'RegistriesAddCtrl as ctrl'
         })
+        .state('index.registries.show', {
+          url: '/:id',
+          templateUrl: 'registries/registries.show.tpl.html',
+          controller: 'RegistriesShowCtrl as ctrl'
+        })
         .state('index.registries.edit', {
           url: '/edit',
           templateUrl: 'registries/registries.edit.tpl.html',
