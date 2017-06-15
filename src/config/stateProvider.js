@@ -24,7 +24,7 @@
         .state('index.home', {
           url: 'home',
           templateUrl: 'registries/home.tpl.html',
-          controller: 'RegistriesCtrl as ctrl'
+          controller: 'RegistriesListCtrl'
         })
         .state('index.analytics', {
             url: 'analytics',

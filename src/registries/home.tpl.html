@@ -4,7 +4,10 @@
     <h2>Open Registries</h2>
     <div class="row">
         <ul id="open-registries" class="list-group">
-            <li class="list-group-item" ng-repeat="registry in ctrl.registries"><a href="#">{{ registry.name }}</a></li>
+            <li class="list-group-item" ng-repeat="registry in openRegistries"><a href="#">{{ registry.name }}</a></li>
         </ul>
+        <div ng-if="openRegistries.length == 0" class="alert alert-dismissible alert-info">
+            No open registries defined.
+        </div>
     </div>
 </div>
