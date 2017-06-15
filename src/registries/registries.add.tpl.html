@@ -3,37 +3,42 @@
     <form class="form-horizontal">
       <fieldset>
         <div class="form-group">
-          <div class="col-md-9 col-md-offset-3">
+          <div class="col-md-10">
             <h3>Create new registry</h3>
           </div>
         </div>
 
         <div class="form-group">
-          <label for="inputName" class="col-md-3 control-label">Name</label>
-          <div class="col-md-9">
+          <div class="col-md-2">
+            <label for="inputName" class="control-label">Name</label>
+          </div>
+
+          <div class="col-md-10">
             <input type="text" class="form-control" ng-model="ctrl.registry.name" id="inputName" placeholder="Registry name">
           </div>
         </div>
 
         <div class="form-group">
-          <label for="inputDescription" class="col-md-3 control-label">Description</label>
-          <div class="col-md-9">
+          <div class="col-md-2">
+            <label for="inputDescription" class="control-label">Description</label>
+          </div>
+          <div class="col-md-10">
             <textarea type="text" class="form-control" ng-model="ctrl.registry.description" id="inputDescription"
                       placeholder="Description"></textarea>
           </div>
         </div>
 
         <div class="form-group">
-          <div class="col-md-9 col-md-offset-3">
+          <div class="col-md-10">
             <h3>Patient Administrative Data</h3>
           </div>
         </div>
 
         <div class="form-group" ng-repeat="field in ctrl.registry.administrativeFields">
-          <div class="col-md-3 col-md-offset-3">
+          <div class="col-md-2">
             <input type="text" class="form-control" ng-model="field.name" placeholder="Field name">
           </div>
-          <div class="col-md-3">
+          <div class="col-md-2">
             <textarea ng-if="field.type == 'textarea'" ng-model="field.value" cols="30" rows="5" class="form-control" placeholder="Value"></textarea>
 
             <input ng-if="field.type == 'text'" type="text" class="form-control" ng-model="field.value" placeholder="Value">
@@ -42,7 +47,7 @@
 
             <input ng-if="field.type == 'checkbox'" type="checkbox" class="form-control" ng-model="field.value" placeholder="Value">
           </div>
-          <div class="col-md-3">
+          <div class="col-md-2">
             <select ng-model="field.type" class="form-control">
               <option value="textarea">Textarea</option>
               <option value="text">String</option>
@@ -50,25 +55,28 @@
               <option value="checkbox">Checkbox</option>
             </select>
           </div>
+          <div class="col-md-2">
+            <input type="text" class="form-control" ng-model="field.length" placeholder="Length">
+          </div>
         </div>
 
         <div class="form-group">
-          <div class="col-md-9 col-md-offset-3">
+          <div class="col-md-10">
             <button ng-click="ctrl.addAdministrativeField()" class="btn btn-primary btn-xs">Add new</button>
           </div>
         </div>
 
         <div class="form-group">
-          <div class="col-md-9 col-md-offset-3">
+          <div class="col-md-10">
             <h3>Patient Clinical Data</h3>
           </div>
         </div>
 
         <div class="form-group" ng-repeat="field in ctrl.registry.clinicalFields">
-          <div class="col-md-3 col-md-offset-3">
+          <div class="col-md-2">
             <input type="text" class="form-control" ng-model="field.name" placeholder="Field name">
           </div>
-          <div class="col-md-3">
+          <div class="col-md-2">
             <textarea ng-if="field.type == 'textarea'" ng-model="field.value" cols="30" rows="5" class="form-control" placeholder="Value"></textarea>
 
             <input ng-if="field.type == 'text'" type="text" class="form-control" ng-model="field.value" placeholder="Value">
@@ -77,7 +85,7 @@
 
             <input ng-if="field.type == 'checkbox'" type="checkbox" class="form-control" ng-model="field.value" placeholder="Value">
           </div>
-          <div class="col-md-3">
+          <div class="col-md-2">
             <select ng-model="field.type" class="form-control">
               <option value="textarea">Textarea</option>
               <option value="text">String</option>
@@ -85,17 +93,20 @@
               <option value="checkbox">Checkbox</option>
             </select>
           </div>
+          <div class="col-md-2">
+            <input type="text" class="form-control" ng-model="field.length" placeholder="Length">
+          </div>
         </div>
 
         <div class="form-group">
-          <div class="col-md-9 col-md-offset-3">
+          <div class="col-md-10">
             <button ng-click="ctrl.addClinicalField()" class="btn btn-primary btn-xs">Add new</button>
           </div>
         </div>
 
         <div class="form-group">
-          <div class="col-md-9 col-md-offset-3">
-            <button type="submit" class="btn btn-success">Add</button>
+          <div class="col-md-10">
+            <button type="submit" class="btn btn-success">Save</button>
           </div>
         </div>
       </fieldset>

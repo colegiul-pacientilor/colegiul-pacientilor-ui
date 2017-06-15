@@ -41,7 +41,8 @@
       this.registry.clinicalFields.push({
         name: '',
         value: '',
-        type: 'text'
+        type: 'text',
+        length: 0
       });
     };
   }
