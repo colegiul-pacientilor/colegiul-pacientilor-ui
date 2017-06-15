@@ -24,6 +24,10 @@
           url: 'home',
           templateUrl: 'home/home.tpl.html'
         })
+          .state('index.analytics', {
+              url: 'analytics',
+              templateUrl: 'home/analytics.tpl.html'
+          })
         .state('index.registries', {
           url: 'registries',
           templateUrl: 'registries/registries.tpl.html',
