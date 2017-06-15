@@ -10,7 +10,8 @@
     'angular-loading-bar',
     'ui.bootstrap',
     'ng-showdown',
-    'colegiul-pacientilor.registries.controller'
+    'colegiul-pacientilor.registries.controller',
+    'colegiul-pacientilor.registries.factory'
   ]);
 
   angular.element(document).ready(function() {
