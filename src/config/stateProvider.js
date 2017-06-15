@@ -31,7 +31,7 @@
         .state('index.registries', {
           url: 'registries',
           templateUrl: 'registries/registries.tpl.html',
-          controller: 'RegistriesCtrl as ctrl'
+          controller: 'RegistriesCtrl'
         })
         .state('index.users', {
           url: 'users',
