@@ -27,7 +27,23 @@
         })
         .state('index.registries', {
           url: 'registries',
+          abstract: true,
           templateUrl: 'registries/registries.tpl.html'
+        })
+        .state('index.registries.list', {
+          url: '/list',
+          templateUrl: 'registries/registries.list.tpl.html',
+          controller: 'RegistriesCtrl as ctrl'
+        })
+        .state('index.registries.add', {
+          url: '/add',
+          templateUrl: 'registries/registries.add.tpl.html',
+          controller: 'RegistriesCtrl as ctrl'
+        })
+        .state('index.registries.edit', {
+          url: '/edit',
+          templateUrl: 'registries/registries.edit.tpl.html',
+          controller: 'RegistriesCtrl as ctrl'
         })
         .state('index.users', {
           url: 'users',

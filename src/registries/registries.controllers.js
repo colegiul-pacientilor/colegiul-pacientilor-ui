@@ -7,13 +7,13 @@ RegistriesFactory.$inject = ['RegistriesFactory'];
 function RegistriesCtrl(RegistriesFactory) {
         this.sample = "test";
 
-        RegistriesFactory.getOpenRegistries()
-            .then(function(data) {
-                console.log('Dude! Here is data');
-            })
-            .catch(function(error) {
-                console.log('Dude! There are some errors');
-            });
+        // RegistriesFactory.getOpenRegistries()
+        //     .then(function(data) {
+        //         console.log('Dude! Here is data');
+        //     })
+        //     .catch(function(error) {
+        //         console.log('Dude! There are some errors');
+        //     });
         // this.registries = [
         //     {
         //         id: 1,
