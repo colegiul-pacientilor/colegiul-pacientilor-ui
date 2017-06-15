@@ -25,11 +25,20 @@
       name: '',
       description: '',
       status: '',
-      fields: []
+      administrativeFields: [],
+      clinicalFields: []
     };
 
-    this.addInput = function() {
-      this.registry.fields.push({
+    this.addAdministrativeField = function() {
+      this.registry.administrativeFields.push({
+        name: '',
+        value: '',
+        type: 'text'
+      });
+    };
+
+    this.addClinicalField = function() {
+      this.registry.clinicalFields.push({
         name: '',
         value: '',
         type: 'text'

@@ -1,11 +1,13 @@
 <div class="row">
   <div class="col-md-12">
-    <h1 class="pull-right">Add registry</h1>
-  </div>
-
-  <div class="col-md-12">
     <form class="form-horizontal">
       <fieldset>
+        <div class="form-group">
+          <div class="col-md-9 col-md-offset-3">
+            <h3>Create new registry</h3>
+          </div>
+        </div>
+
         <div class="form-group">
           <label for="inputName" class="col-md-3 control-label">Name</label>
           <div class="col-md-9">
@@ -21,7 +23,13 @@
           </div>
         </div>
 
-        <div class="form-group" ng-repeat="field in ctrl.registry.fields">
+        <div class="form-group">
+          <div class="col-md-9 col-md-offset-3">
+            <h3>Patient Administrative Data</h3>
+          </div>
+        </div>
+
+        <div class="form-group" ng-repeat="field in ctrl.registry.administrativeFields">
           <div class="col-md-3 col-md-offset-3">
             <input type="text" class="form-control" ng-model="field.name" placeholder="Field name">
           </div>
@@ -46,7 +54,42 @@
 
         <div class="form-group">
           <div class="col-md-9 col-md-offset-3">
-            <button ng-click="ctrl.addInput()" class="btn btn-primary btn-xs">Add input</button>
+            <button ng-click="ctrl.addAdministrativeField()" class="btn btn-primary btn-xs">Add new</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-9 col-md-offset-3">
+            <h3>Patient Clinical Data</h3>
+          </div>
+        </div>
+
+        <div class="form-group" ng-repeat="field in ctrl.registry.clinicalFields">
+          <div class="col-md-3 col-md-offset-3">
+            <input type="text" class="form-control" ng-model="field.name" placeholder="Field name">
+          </div>
+          <div class="col-md-3">
+            <textarea ng-if="field.type == 'textarea'" ng-model="field.value" cols="30" rows="5" class="form-control" placeholder="Value"></textarea>
+
+            <input ng-if="field.type == 'text'" type="text" class="form-control" ng-model="field.value" placeholder="Value">
+
+            <input ng-if="field.type == 'radio'" type="radio" class="form-control" ng-model="field.value" placeholder="Value">
+
+            <input ng-if="field.type == 'checkbox'" type="checkbox" class="form-control" ng-model="field.value" placeholder="Value">
+          </div>
+          <div class="col-md-3">
+            <select ng-model="field.type" class="form-control">
+              <option value="textarea">Textarea</option>
+              <option value="text">String</option>
+              <option value="radio">Radio button</option>
+              <option value="radio">Checkbox</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-9 col-md-offset-3">
+            <button ng-click="ctrl.addClinicalField()" class="btn btn-primary btn-xs">Add new</button>
           </div>
         </div>
 
