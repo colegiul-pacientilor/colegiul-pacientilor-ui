@@ -35,7 +35,7 @@
           templateUrl: 'registries/registries.tpl.html'
         })
         .state('index.registries.list', {
-          url: '/list',
+          url: '/',
           templateUrl: 'registries/registries.list.tpl.html',
           controller: 'RegistriesListCtrl'
         })
@@ -45,7 +45,7 @@
           controller: 'RegistriesAddCtrl as ctrl'
         })
         .state('index.registries.edit', {
-          url: '/edit',
+          url: '/:id/edit',
           templateUrl: 'registries/registries.edit.tpl.html',
           controller: 'RegistriesCtrl as ctrl'
         })

@@ -1,13 +1,13 @@
 <div>
     <div class="row">
         <div class="col-md-3">
-            <input ng-model="filterValue" class="form-control input-sm"/>
+            <input ng-model="search" class="form-control input-sm"/>
         </div>
         <div class="col-md-3">
             <button ng-click="filter()" class="btn btn-xs btn-success">Search</button>
         </div>
         <div class="col-md-1 col-md-offset-4">
-            <button ui-sref="index.registries.add" class="btn btn-xs btn-success">Create new Registry</button>
+            <button ui-sref="index.registries.add" class="btn btn-xs btn-success">Create New Registry</button>
         </div>
     </div>
 
@@ -15,7 +15,38 @@
 
     <div class="row">
         <div class="col-md-12">
-            <div id="users" ui-grid="gridOptions" class="grid"></div>
+            <!--<div id="users" ui-grid="gridOptions" class="grid"></div>-->
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        <a ng-click="sortBy('name')" class="btn btn-link">Name</a>
+                        <span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span>
+                    </th>
+                    <th>
+                        <a ng-click="sortBy('status')" class="btn btn-link">Status</a>
+                        <span class="sortorder" ng-show="propertyName === 'status'" ng-class="{reverse: reverse}"></span>
+                    </th>
+                    <th>
+                        <a ng-click="sortBy('nbrRecords')" class="btn btn-link">Cases</a>
+                        <span class="sortorder" ng-show="propertyName === 'nbrRecords'" ng-class="{reverse: reverse}"></span>
+                    </th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="registry in registries | filter: search | orderBy:propertyName:reverse">
+                    <td>{{registry.name}}</td>
+                    <td>{{registry.status}}</td>
+                    <td>{{registry.nbrRecords}}</td>
+                    <td>
+                        <a ui-sref="index.registries.show({ id: registry._id })">View</a>
+                        <span> | </span>
+                        <a ui-sref="index.registries.edit({ id: registry._id })">Edit</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table> 
         </div>
     </div>
 </div>

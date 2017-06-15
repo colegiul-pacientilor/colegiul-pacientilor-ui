@@ -14,12 +14,12 @@ function RegistriesFactory($http) {
     // Implementations
 
     function getOpenRegistries() {
-        var config = {
-            method: "get",
-            url: "registries.json"
-        };
+        // var config = {
+        //     method: "get",
+        //     url: "registries.json"
+        // };
 
-        return $http(config);
+        // return $http(config);
     }
 
     function getRegistries() {
