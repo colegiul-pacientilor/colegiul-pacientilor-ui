@@ -4,6 +4,7 @@
   "description": "colegiul-pacientilor-ui",
   "main": "dist/colegiul-pacientilor-ui.min.js",
   "scripts": {
+    "start": "PORT=9001 hs -c0",
     "test": "karma start karma.conf.js --single-run",
     "prod-build": "grunt",
     "push-tags": "git push && git push --tags",
