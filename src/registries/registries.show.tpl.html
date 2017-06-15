@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-12">
+    <h3>{{ ctrl.registry.name }}</h3>
+    <p>
+      <span class="label label-success">
+        <strong>Cases</strong>: {{ ctrl.registry.nbrRecords }}
+      </span>
+
+      <span class="label label-success">
+        <strong>Open Date</strong>: {{ ctrl.registry.createdAt | date: 'yyyy-mm-dd'}}
+      </span>
+
+      <span class="label label-success">
+        <strong>Status</strong>: {{ ctrl.registry.status }}
+      </span>
+    </p>
+    <p>{{ ctrl.registry.description }}</p>
+  </div>
+
+  <div class="col-md-12">
+    <ul class="nav nav-pills">
+      <li><a href="">Add Case</a></li>
+      <li><a href="">Import</a></li>
+      <li><a href="">Modify</a></li>
+      <li><a href="">PDF</a></li>
+      <li><a href="">XLS</a></li>
+    </ul>
+  </div>
+
+  <div class="col-md-12">
+    <div ui-grid="ctrl.gridOptions" class="grid"></div>
+  </div>
+</div>
