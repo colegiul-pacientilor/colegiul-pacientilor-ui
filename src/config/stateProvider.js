@@ -22,12 +22,12 @@
         })
         .state('index.home', {
           url: 'home',
-          templateUrl: 'views/home/home.tpl.html'
+          templateUrl: 'home/home.tpl.html'
         })
         .state('index.registries', {
           url: 'registries',
-          templateUrl: 'views/registries/registries.tpl.html',
-          controller: 'RegistriesCtrl as registry'
+          templateUrl: 'registries/registries.tpl.html',
+          controller: 'RegistriesCtrl as ctrl'
         })
         .state('index.users', {
           url: 'users',
@@ -36,7 +36,7 @@
         })
         .state('index.profile', {
           url: 'profile',
-          templateUrl: 'views/profile/profile.tpl.html'
+          templateUrl: 'profile/profile.tpl.html'
         })
 
 
