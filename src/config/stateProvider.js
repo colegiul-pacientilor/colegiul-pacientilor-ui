@@ -14,7 +14,8 @@
         })
         .state('register', {
           url: '/register',
-          templateUrl: 'views/auth/register.tpl.html'
+          templateUrl: 'views/auth/register.tpl.html',
+          controller: 'AuthController'
         })
         .state('index', {
           url: '/',
