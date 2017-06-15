@@ -11,6 +11,7 @@
     'ui.bootstrap',
     'ng-showdown',
     'colegiul-pacientilor.registries.controller',
+    'colegiul-pacientilor.profile.controllers',
     'ui.grid'
   ]);
 

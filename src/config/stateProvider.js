@@ -36,7 +36,8 @@
         })
         .state('index.profile', {
           url: 'profile',
-          templateUrl: 'profile/profile.tpl.html'
+          templateUrl: 'profile/profile.tpl.html',
+          controller: 'ProfileController as ctrl'
         })
 
 
