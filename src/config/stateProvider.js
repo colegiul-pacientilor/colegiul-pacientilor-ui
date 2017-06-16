@@ -60,6 +60,11 @@
           templateUrl: 'views/users/users.tpl.html',
           controller: 'UsersController'
         })
+        .state('index.groups', {
+          url: 'groups',
+          templateUrl: 'views/groups/groups.tpl.html',
+          controller: 'UsersController'
+        })
         .state('index.profile', {
           url: 'profile',
           templateUrl: 'profile/profile.tpl.html',
