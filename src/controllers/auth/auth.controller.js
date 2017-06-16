@@ -11,7 +11,7 @@
       $scope.doRegister = function() {
         $http({
           method: 'POST',
-          url: 'http://localhost:3001/send',
+          url: 'http://localhost:3001/login',
           data: {
             'sms': {
               'recipient': $scope.user.phone,
@@ -23,8 +23,6 @@
             'Content-Type': 'application/json'
           }
         }).then(function successCallback(response) {
-          console.log(response);
-
           $state.go('index.home');
         }, function errorCallback(response) {
 
