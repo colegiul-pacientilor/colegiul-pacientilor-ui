@@ -4,10 +4,10 @@
             <input ng-model="search" class="form-control input-sm"/>
         </div>
         <div class="col-md-3">
-            <button ng-click="filter()" class="btn btn-xs btn-success">Search</button>
+            <!--<button ng-click="filter()" class="btn btn-xs btn-success">Search</button>-->
         </div>
         <div class="col-md-1 col-md-offset-4">
-            <button ui-sref="index.registries.add" class="btn btn-xs btn-success">Create New Registry</button>
+            <button ui-sref="index.registries.add" class="btn btn-primary btn-lg">Create New Registry</button>
         </div>
     </div>
 
@@ -27,7 +27,7 @@
                         <span class="sortorder" ng-show="propertyName === 'status'" ng-class="{reverse: reverse}"></span>
                     </th>
                     <th>
-                        <a ng-click="sortBy('nbrRecords')" class="btn btn-link">Cases</a>
+                        <a ng-click="sortBy('nbrRecords')" class="btn btn-primary btn-lgbtn btn-link">Cases</a>
                         <span class="sortorder" ng-show="propertyName === 'nbrRecords'" ng-class="{reverse: reverse}"></span>
                     </th>
                     <th>Actions</th>
