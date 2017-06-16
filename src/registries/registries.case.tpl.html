@@ -1,0 +1,64 @@
+<div>
+    <form class="form-horizontal">
+        <fieldset>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <h3>Patient Administrative Data</h3>
+                </div>
+            </div>
+
+            <div class="form-group"
+                 ng-repeat="field in ctrl.registry.fields | filter:{'regType':  'administrative'}:true ">
+                <div class="col-md-2">
+                    <label>{{field.name}}</label>
+                </div>
+                <div class="col-md-2">
+                    <textarea ng-if="field.type == 'textarea'" ng-model="field.value" cols="30" rows="5"
+                              class="form-control" placeholder="Value"></textarea>
+
+                    <input ng-if="field.type == 'text'" type="text" class="form-control" ng-model="field.value"
+                           placeholder="Value">
+
+                    <input ng-if="field.type == 'radio'" type="radio" class="form-control" ng-model="field.value"
+                           placeholder="Value">
+
+                    <input ng-if="field.type == 'checkbox'" type="checkbox" class="form-control" ng-model="field.value"
+                           placeholder="Value">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <h3>Patient Clinical Data</h3>
+                </div>
+            </div>
+
+            <div class="form-group" ng-repeat="field in ctrl.registry.fields | filter:{'regType': 'clinical'}:true ">
+                <div class="col-md-2">
+                    <label>{{field.name}}</label>
+                </div>
+                <div class="col-md-2">
+                    <textarea ng-if="field.type == 'textarea'" ng-model="field.value" cols="30" rows="5"
+                              class="form-control" placeholder="Value"></textarea>
+
+                    <input ng-if="field.type == 'text'" type="text" class="form-control" ng-model="field.value"
+                           placeholder="Value">
+
+                    <input ng-if="field.type == 'radio'" type="radio" class="form-control" ng-model="field.value"
+                           placeholder="Value">
+
+                    <input ng-if="field.type == 'checkbox'" type="checkbox" class="form-control" ng-model="field.value"
+                           placeholder="Value">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <button ng-click="ctrl.submit()" class="btn btn-success">Save</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
