@@ -41,7 +41,7 @@
           controller: 'RegistriesListCtrl'
         })
           .state('index.registries.addcase', {
-              url: "/registries/:id/add",
+              url: "/:id/add",
               templateUrl: 'registries/registries.case.tpl.html',
               controller: 'RegistriesShowCtrl as ctrl'
           })
