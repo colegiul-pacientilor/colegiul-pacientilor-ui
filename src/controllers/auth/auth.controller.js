@@ -23,8 +23,6 @@
             'Content-Type': 'application/json'
           }
         }).then(function successCallback(response) {
-          console.log(response);
-
           $state.go('index.home');
         }, function errorCallback(response) {
 
