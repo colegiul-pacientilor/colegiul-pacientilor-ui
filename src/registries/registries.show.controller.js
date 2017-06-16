@@ -26,7 +26,7 @@
 
           $http({
               method: 'POST',
-              url: 'http://localhost:3001/' + self.registry._id + "/records",
+              url: 'http://localhost:3001/registries/' + self.registry._id + "/records",
               data: data,
               headers: {
                   'Content-Type': 'application/json'
