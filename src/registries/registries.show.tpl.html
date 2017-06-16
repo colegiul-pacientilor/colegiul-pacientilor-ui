@@ -3,7 +3,7 @@
     <h3>{{ ctrl.registry.name }}</h3>
     <p>
       <span class="label label-primary">
-        <strong>Cases</strong>: {{ ctrl.registry.nbrRecords }}
+        <strong>Cases</strong>: {{ ctrl.registry.records.length }}
       </span>
 
       <span class="label label-primary">
@@ -20,7 +20,7 @@
   <div class="col-md-12">
     <ul class="nav nav-pills">
       <li><a ui-sref="index.registries.addcase( {id: ctrl.registry._id } )" >Add Case</a></li>
-      <li><a href="">Import</a></li>
+      <li><a ui-sref="index.registries.upload( {registryId: ctrl.registryId } )">Import</a></li>
       <li><a href="">Modify</a></li>
       <li><a href="">PDF</a></li>
       <li><a href="">XLS</a></li>

@@ -37,7 +37,7 @@
                 <tr ng-repeat="registry in registries | filter: search | orderBy:propertyName:reverse">
                     <td>{{registry.name}}</td>
                     <td>{{registry.status}}</td>
-                    <td>{{registry.nbrRecords}}</td>
+                    <td>{{registry.records.length}}</td>
                     <td>
                         <a ui-sref="index.registries.show({ id: registry._id })">View</a>
                         <span> | </span>

@@ -13,7 +13,7 @@
     self.gridOptions = {
       enableSorting: true
     };
-
+    self.registryId = $state.params.id;
 
       self.caseSubmit = function() {
         var data  = { name: 'meaningless name'};

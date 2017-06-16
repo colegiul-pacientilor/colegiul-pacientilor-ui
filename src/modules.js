@@ -14,6 +14,8 @@
     'colegiul-pacientilor.registries.controller',
     'colegiul-pacientilor.profile.controllers',
     'colegiul-pacientilor.registries.list.controller',
+    'colegiul-pacientilor.registries.upload.controller',
+    'angularFileUpload',
     'ui.grid'
   ]);
 

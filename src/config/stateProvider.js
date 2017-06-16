@@ -60,6 +60,11 @@
           templateUrl: 'registries/registries.edit.tpl.html',
           controller: 'RegistriesCtrl as ctrl'
         })
+          .state('index.registries.upload', {
+              url: '/:registryId/upload',
+              templateUrl: 'registries/uploadExcel/uploadExcelFile.tpl.html',
+              controller: 'UploadController'
+          })
         .state('index.users', {
           url: 'users',
           templateUrl: 'views/users/users.tpl.html',
