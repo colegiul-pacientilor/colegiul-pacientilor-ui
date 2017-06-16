@@ -19,7 +19,7 @@
 
   <div class="col-md-12">
     <ul class="nav nav-pills">
-      <li><a href="">Add Case</a></li>
+      <li><a ui-sref="index.registries.addcase( {id: ctrl.registry._id } )" >Add Case</a></li>
       <li><a href="">Import</a></li>
       <li><a href="">Modify</a></li>
       <li><a href="">PDF</a></li>
@@ -30,4 +30,6 @@
   <div class="col-md-12">
     <div ui-grid="ctrl.gridOptions" class="grid"></div>
   </div>
+
+  <pre>  {{  ctrl | json  }} </pre>
 </div>
