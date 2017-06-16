@@ -5,7 +5,8 @@
     .module('colegiul-pacientilor.registries.list.controller', ['colegiul-pacientilor.registries.services'])
     .controller('RegistriesListCtrl', ['$scope', 'RegistryService', '$state', 
       function ($scope, RegistryService, $state) {
-        var displayStatus = 'OPEN';
+        var displayOpenStatus = 'OPEN',
+            displayActiveStatus = 'ACTIVE';
         
         $scope.search = '';
   
@@ -27,7 +28,7 @@
           $scope.registries = response.data;
           
           $scope.openRegistries = response.data.filter(function(item) { 
-            return item.status == displayStatus;
+            return item.status == displayOpenStatus || displayActiveStatus;
           });
         });
     }]);
